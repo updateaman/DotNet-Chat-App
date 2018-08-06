@@ -6,7 +6,7 @@ const MinicssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = {
     entry: "./src/index.ts",
     output: {
-        path: path.resolve(__dirname, "wwwroot"),
+        path: path.resolve(__dirname, "wwwroot/MyStaticFiles"),
         filename: "[name].[chunkhash].js",
         publicPath: "/"
     },
@@ -26,7 +26,7 @@ module.exports = {
         ]
     },
     plugins: [
-        new CleanWebpackPlugin(["wwwroot/*"]),
+        new CleanWebpackPlugin(["wwwroot/MyStaticFiles/*"]),
         new HtmlWebpackPlugin({
             template: "./src/index.html"
         }),
